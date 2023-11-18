@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Comfortaa', sans-serif;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/bg-2.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+}
+
+.container{
+	width: 100%;
+	padding: 30px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h1 {
+	color: #FFF;
+	font-size: 60px;
+	font-family: 'Courgette', cursive;
+}
+
+h2{
+	color: #FFCC00;
+	font-size: 50px;
+}
+
+.celeb {
+	position: relative;
+	color: #FFF;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 45px;
+	background-color: #5E17EB;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 15px;
+}
+
+.celeb::before, .celeb::after {
+  content: '';
+  width: 50px;
+  height: 100%;
+  background-color: #5E17EB;
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
+  background-image: linear-gradient(45deg, transparent 50%, #3c1094 50%);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.celeb::before {
+  left: -40px;
+}
+
+.celeb::after {
+  right: -40px;
+  transform: scaleX(-1);
+}
+
+.info {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.info__dt {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #FFF;
+	width: 100%;
+}
+
+.info__dt__date{
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	text-align: center;
+	border-left: 2px solid #FFF;
+}
+
+.info__dt__date:nth-child(1) {
+	border: 0;
+}
+
+.info__dt__date div {
+	font-size: 90px;
+	color: #FFCC00;
+}
+
+.info__dt__date p {
+	font-size: 20px;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+.appointment {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.appointment a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 30px 0;
+	width: 100%;
+	margin: 0 auto;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 18px;
+	border-bottom: 2px solid #FFF;
+	text-transform: uppercase;
+}
+
+.appointment a i {
+	margin-right: 15px;
+	font-size: 25px;
+}
+
+.appointment a:last-child {
+	border: 0;
+	color: #FFCC00;
+}
